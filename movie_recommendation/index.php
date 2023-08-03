@@ -41,6 +41,10 @@ $obj =  new Functions();
         </div>
       </div>
     </header>
+    <div class="container">
+  <img src="images/roman.jpeg" alt="Notebook" style="width:100%; height:50%">
+  <div class="content">
+</div>
 
     <main role="main">
 
@@ -56,9 +60,6 @@ $obj =  new Functions();
                 <img src='<?php echo($row["url"]); ?>' data-src="holder.js" alt="Card image cap" class="card-img-top img-fluid" style="width: 22rem; height: 20rem;"/>
                   <div class="card-body">
                   <p class="card-text"><b>Title: </b><?php echo $row["title"]; ?></p>
-                  <p class="card-text"><b>Description: </b><?php echo $row["desc"]; ?></p>
-                  <p class="card-text"><b>Ratings: </b><?php echo $row["ratings"]; ?></p>
-                  <p class="card-text"><b>Duration: </b><?php echo $row["duration"]; ?></p>
                   <p class="card-text"><b>Release Date: </b><?php echo $row["date"]; ?></p>
                 </div>
               </div>

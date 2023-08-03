@@ -37,13 +37,12 @@ $result = $obj->get_recommendations();
 
   <main role="main">
 
-      <section class="jumbotron text-center" style="background-color:powderblue;">
+  <section class=" text-center" style="background-color:lightgreen;">
         <div class="container">
-          <h1 class="jumbotron-heading"><?php echo $type; ?> Movie Recommendations</h1>
+          <h3 class="heading">All Time Movie Recommendations!</h3>
 <p>&nbsp;</p>
         </div>
       </section>
-
       <div class="album py-5 bg-light">
         <div class="container">
 
@@ -53,12 +52,11 @@ $result = $obj->get_recommendations();
 		{
 		?>            <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img src='<?php echo($row["image"]); ?>' data-src="holder.js" alt="Card image cap" class="card-img-top img-fluid" style="width: 22rem; height: 20rem;"/>
+                <img src='<?php echo($row["url"]); ?>' data-src="holder.js" alt="Card image cap" class="card-img-top img-fluid" style="width: 22rem; height: 20rem;"/>
                   <div class="card-body">
-                  <p class="card-text"><b>Name: </b><?php echo $row["name"]; ?></p>
-                  <p class="card-text"><b>Type: </b><?php echo $row["type"]; ?></p>
-                  <p class="card-text"><b>Description: </b><?php echo $row["desc"]; ?></p>
-                  
+                  <p class="card-text"><b>Title: </b><?php echo $row["title"]; ?></p>
+                  <p class="card-text"><b>Year: </b><?php echo $row["date"]; ?></p>
+                  <p class="card-text"><b>Brief Summary: </b><?php echo $row["desc"]; ?></p>
                 </div>
               </div>
             </div>

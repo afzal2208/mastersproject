@@ -68,6 +68,36 @@ class Functions{
     return $result;
 }
 
+public function get_recommendations(){
+  $sparql = "SELECT DISTINCT ?title ?desc ?url ?date
+  WHERE {
+    ?var a moviedata:Movie.
+    ?var moviedata:ratings 'recommend'.
+    ?var moviedata:title ?title.
+    ?var moviedata:description ?desc.
+    ?var moviedata:url ?url.
+    ?var moviedata:release_date ?date
+  }
+  ORDERBY (?title)";
+  $result = sparql_query( $sparql ); 
+  return $result;
+}
+
+public function get_genres(){
+  $sparql = "SELECT ?title ?genre ?url ?date ?duration
+  WHERE {
+    ?var a moviedata:Movie.
+    ?var moviedata:has_genre ?genre.
+    ?var moviedata:title ?title.
+    ?var moviedata:duration ?duration.
+    ?var moviedata:url ?url.
+    ?var moviedata:release_date ?date
+  }
+  ORDERBY (?title)";
+  $result = sparql_query( $sparql ); 
+  return $result;
+}
+
    
    
 
